@@ -22,7 +22,6 @@ class Animal extends Creature {
 
         if (age < 3) {
             status = "Underaged for innoculation...";
-
         } else {
             status = "Successfully innoculated!";
         }
