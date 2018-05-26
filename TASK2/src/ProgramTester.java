@@ -41,7 +41,7 @@ public class ProgramTester {
 
         System.out.print("\n\"4 Digital Number(Task4)\"");
         
-       Sequence.makeDigits(number);
+        Sequence.makeDigits(number);
         
         System.out.printf("\nNumber sequence in %d is %s\n", number, Sequence.toDigitSequence());
     }
