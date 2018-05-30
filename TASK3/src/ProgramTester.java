@@ -18,7 +18,6 @@ public class ProgramTester {
 
         View.print("*Triangle*");
         View.print("\n" + result + "\n");
-
     }
 
     public static void dragonTest() {
@@ -50,7 +49,6 @@ public class ProgramTester {
 
         View.print("\n*MoodSensor*");
         View.print("\n" + result + "\n");
-
     }
 
     public static void calendarTest() {
@@ -63,5 +61,4 @@ public class ProgramTester {
         View.print("\n*Calendar*");
         View.print("\n" + result + "\n");
     }
-
 }
