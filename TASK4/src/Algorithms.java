@@ -99,6 +99,9 @@ public class Algorithms {
     }
 
     public static int findDifDigits(int number) throws Exception {
+     
+        InvalidException.isInvalidException(number);
+        
         int remainder = 0;
 
         int num_0 = 0;
@@ -111,8 +114,6 @@ public class Algorithms {
         int num_7 = 0;
         int num_8 = 0;
         int num_9 = 0;
-
-        InvalidException.isInvalidException(number);
 
         while (number > 0) {
             remainder = number % TEN;
