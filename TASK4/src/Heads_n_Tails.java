@@ -7,8 +7,6 @@ public class Heads_n_Tails {
 
         InvalidException.isInvalidException(number_of_throws);
 
-        String result = "Enter a positive number! ";
-
         int heads = 0;
         int tails = 0;
         int side = 0;
@@ -23,10 +21,9 @@ public class Heads_n_Tails {
             } else {
                 tails++;
             }
-            result = "You threw the coin for: " + number_of_throws + " times." + " Heads: " + heads + " Tails: "
-                        + tails;
         }
-        return result;
+        return "You threw the coin for: " + number_of_throws + " times." + " Heads: " + heads + " Tails: "
+                  + tails;
     }
 
 }
