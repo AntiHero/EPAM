@@ -1,51 +1,48 @@
 
 public class ProgramTester {
-    public static void headstailsTester() {
-        int number_of_throws = 15;
+    public static void headstailsTester() throws Exception {
+        int number_of_throws = 10;
 
-        String result = Heads_n_Tails.calcHeadsTails(number_of_throws);
+        View.print("***Heads N Tails***\n");
         
-        Print.print("***Heads N Tails***\n");
-        Print.print(result + "\n");
+        String result = Heads_n_Tails.calcHeadsTails(number_of_throws);
+
+        View.print(result + "\n");
     }
 
-    public static void algorithmsTest() {
-        int number = 777;
+    public static void algorithmsTest() throws Exception {
+        int number = 66966;
         
-        Print.print("\n***Algorithms***");
-
-        String task1 = "\nMax value in number " + number + " is " + Algorithms.findMaxNatural(number);
+        View.print("\n***Algorithms***");
         
-        Print.print(task1);
+        String task1 = "\nMax value in natural number " + number + " is " + Algorithms.findMaxNatural(number);
+        View.print(task1);
 
-        String task2= Algorithms.findPalindrome(number);
-        Print.print("\n" + task2 + "\n");
+        String task2 = Algorithms.findPalindrome(number);
+        View.print("\n" + task2 + "\n");
 
-        String task3 = Algorithms.isSimpleNatural(number);
-        Print.print(task3 + "\n");
+        String task3 = "Number " + number + " is prime: " + Algorithms.isSimpleNatural(number);
+        View.print(task3 + "\n");
 
         String task4 = "Simple deviders of number " + number + " are: " + Algorithms.findSimpNatDivider(number);
-        Print.print(task4);
+        View.print(task4);
 
-        int number_1 = 60;
-        int number_2 = 15;
+        int number_1 = 10;
+        int number_2 = 12;
 
-        String task5 = Algorithms.findGCD(number_1, number_2);
-        Print.print("\nNumbers are: " + number_1 + " and " + number_2 + ". " + task5);
+        String task5 = "Numbers are: " + number_1 + ", " + number_2 + ". GCD is: "
+                            + Algorithms.findGCD(number_1, number_2) + " LCM is: " + Algorithms.findLCM(number_1, number_2);
+        View.print("\n" + task5);
 
         String task6 = "The number of different digits in " + number + " is " + Algorithms.findDifDigits(number);
-        Print.print("\n" + task6 + "\n");
-
-       
+        View.print("\n" + task6 + "\n");
     }
 
-    public static void perfectnumberTest() {
-        int number = 28;
-        
-        Print.print("\n***Perfect Number***");
-        
-        String result = Perfect_Number.isPerfectNumber(number);
-        
-        Print.print("\nYour number is: " + number  + result + "\n");
+    public static void perfectnumberTest() throws Exception {
+        int number = 8128;
+
+        View.print("\n***Perfect Number***");
+
+        View.print("\nYour number " + number + " is perfect: " + Perfect_Number.isPerfectNumber(number));
     }
 }
