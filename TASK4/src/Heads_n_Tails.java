@@ -1,9 +1,13 @@
 import java.util.Random;
 
 public class Heads_n_Tails {
-    public static String calcHeadsTails(int number_of_throws) {
+    private final static int NUMBER_OF_SIDES = 2;
+
+    public static String calcHeadsTails(int number_of_throws) throws Exception {
+
+        InvalidException.isInvalidException(number_of_throws);
+
         String result = "Enter a positive number! ";
-        boolean check = Algorithms.check(number_of_throws);
 
         int heads = 0;
         int tails = 0;
@@ -11,19 +15,16 @@ public class Heads_n_Tails {
 
         Random random = new Random();
 
-        if (check) {
-            for (int i = 1; i <= number_of_throws; i++) {
-                side = random.nextInt(2);
+        for (int i = 1; i <= number_of_throws; i++) {
+            side = random.nextInt(NUMBER_OF_SIDES);
 
-                if (side == 0) {
-                    heads++;
-                }
-                else {
-                    tails++;
-                }
+            if (side == 0) {
+                heads++;
+            } else {
+                tails++;
             }
             result = "You threw the coin for: " + number_of_throws + " times." + " Heads: " + heads + " Tails: "
-                    + tails;
+                        + tails;
         }
         return result;
     }
