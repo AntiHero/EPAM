@@ -68,7 +68,7 @@ public class ProgramTester {
     public static void isLocalMaximumTest() {
         int[] array = { 0, 3, 6, 5, 8, 0 };
 
-        String result = "\nArray is " + Arrays.toString(array) + " Its local minimum has index : "
+        String result = "\nArray is " + Arrays.toString(array) + " Its local maximum has index : "
                             + OneDimentionalArray.findLocalMaximumPosition(array);
         View.print(result);
     }
