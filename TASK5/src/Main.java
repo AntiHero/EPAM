@@ -1,8 +1,3 @@
-/**
- * 
- */
-
-import com.sun.glass.ui.Size;
 
 /**
  * @author A.Schemelev
