@@ -8,7 +8,7 @@ public class OneDimentionalArray {
         int max = 0;
         int size = array.length;
 
-        if (size <= 1) {
+        if (size < 1) {
             max = -1;
         } else {
             max = array[0];
@@ -27,7 +27,7 @@ public class OneDimentionalArray {
         int min = 0;
         int size = array.length;
 
-        if (size <= 1) {
+        if (size < 1) {
             min = -1;
         } else {
             min = array[0];
@@ -43,9 +43,8 @@ public class OneDimentionalArray {
 
     public static double findArithmeticAvr(int[] array) {
         int sum = 0;
-        int size = array.length;
 
-        if (size <= 1) {
+        if (array.length < 1) {
             return -1;
         } else {
             for (int element : array) {
@@ -59,9 +58,8 @@ public class OneDimentionalArray {
 
     public static double findGeomAvr(int[] array) {
         int multiple = 1;
-        int size = array.length;
-
-        if (size <= 1) {
+    
+        if (array.length < 1) {
             return -1;
         } else {
             for (int element : array) {
@@ -74,11 +72,10 @@ public class OneDimentionalArray {
 
     public static boolean isSortedAsc(int[] array) {
         boolean result = false;
-        int size = array.length;
 
         if (!isSameElement(array) && !(array[0] > array[1])) {
             result = true;
-            for (int i = 2; i < size; i++) {
+            for (int i = 2; i < array.length; i++) {
                 if (array[i] < array[i - 1]) {
                     result = false;
                     break;
@@ -90,11 +87,10 @@ public class OneDimentionalArray {
 
     public static boolean isSortedDesc(int[] array) {
         boolean result = false;
-        int size = array.length;
 
         if (!isSameElement(array) && !(array[0] < array[1])) {
             result = true;
-            for (int i = 2; i < size; i++) {
+            for (int i = 2; i < array.length; i++) {
                 if (array[i] > array[i - 1]) {
                     result = false;
                     break;
