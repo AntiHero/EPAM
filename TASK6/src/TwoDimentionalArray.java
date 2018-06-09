@@ -87,6 +87,7 @@ public class TwoDimentionalArray {
                         break;
                     }
                 }
+                break;
             }
         }
         return result;
@@ -106,6 +107,7 @@ public class TwoDimentionalArray {
                         break;
                     }
                 }
+                break;
             }
         }
         return result;
