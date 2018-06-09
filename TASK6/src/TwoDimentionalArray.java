@@ -141,12 +141,12 @@ public class TwoDimentionalArray {
 
     public static boolean isNegative(double[][] array) {
         boolean result = false;
-
+        outerloop:
         for (int i = 0; i < array.length; i++)
             for (double element : array[i]) {
                 if (element < 0) {
                     result = true;
-                    break;
+                    break outerloop;
                 }
             }
         return result;
