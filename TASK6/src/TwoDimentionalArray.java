@@ -50,7 +50,6 @@ public class TwoDimentionalArray {
                 }
             }
         }
-
         return sum / (array.length * array[0].length);
     }
 
@@ -162,5 +161,5 @@ public class TwoDimentionalArray {
                 break;
             }
         return result;
-    }
+    }fsfs
 }
