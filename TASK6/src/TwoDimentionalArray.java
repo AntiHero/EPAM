@@ -77,6 +77,7 @@ public class TwoDimentionalArray {
         String result = "-1";
 
         if (array.length >= MIN_ROWS && array[0].length >= MIN_COLUMNS) {
+            outerloop:
             for (int i = 1; i < array.length - 1; i++) {
                 for (int j = 1; j < array[i].length - 1; j++) {
                     if (array[i - 1][j] > array[i][j] 
@@ -84,10 +85,9 @@ public class TwoDimentionalArray {
                                     && array[i + 1][j] > array[i][j]
                                             && array[i][j] < array[i][j + 1]) {
                         result = "i = " + i + ", j = " + j;
-                        break;
+                        break outerloop;
                     }
                 }
-                break;
             }
         }
         return result;
@@ -97,6 +97,7 @@ public class TwoDimentionalArray {
         String result = "-1";
 
         if (array.length >= MIN_ROWS && array[0].length >= MIN_ROWS) {
+            outerloop:
             for (int i = 1; i < array.length - 1; i++) {
                 for (int j = 1; j < array[i].length - 1; j++) {
                     if (array[i - 1][j] < array[i][j] 
@@ -104,10 +105,9 @@ public class TwoDimentionalArray {
                                     && array[i + 1][j] < array[i][j]
                                             && array[i][j] > array[i][j + 1]) {
                         result = "i = " + i + ", j = " + j;
-                        break;
+                        break outerloop;
                     }
                 }
-                break;
             }
         }
         return result;
