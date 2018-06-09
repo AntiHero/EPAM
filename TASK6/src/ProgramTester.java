@@ -13,7 +13,6 @@ public class ProgramTester {
         double[][] array = new double[row][col];
         ArrayInitializerInt.initArray(array, 0, 5);
         
-
         String result = "Max value in array: \n" + ArrayPrinter.print(array)
                             + "is: " + TwoDimentionalArray.findMaxElement(array) +"\n";
         View.print(result);
@@ -72,9 +71,7 @@ public class ProgramTester {
                             + TwoDimentionalArray.findGeomAvr(array) +"\n";
         View.print(result);
     }
-
-  
-
+    
     public static void isLocalMinimumTest() {
         /*int row = 6;
         int col = 6;
