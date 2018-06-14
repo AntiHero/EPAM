@@ -6,7 +6,6 @@ public class Utils {
     CarFleet carFleet;
 
     public static int getCarsQuantity(CarFleet carFleet) {
-
         return carFleet.getNumberOfLightVehicles() + carFleet.getNumberOfTrucks();
     }
 
