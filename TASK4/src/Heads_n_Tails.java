@@ -3,7 +3,7 @@ import java.util.Random;
 public class Heads_n_Tails {
     private final static int NUMBER_OF_SIDES = 2;
 
-    public static String calcHeadsTails(int number_of_throws) throws Exception {
+    public static String calcHeadsTails(int numberOfThrows) throws Exception {
 
         InvalidException.isInvalidException(number_of_throws);
 
@@ -13,17 +13,15 @@ public class Heads_n_Tails {
 
         Random random = new Random();
 
-        for (int i = 1; i <= number_of_throws; i++) {
+        for (int i = 1; i <= numberOfThrows; i++) {
             side = random.nextInt(NUMBER_OF_SIDES);
 
             if (side == 0) {
                 heads++;
-            } else {
-                tails++;
-            }
+            } 
         }
-        return "You threw the coin for: " + number_of_throws + " times." + " Heads: " + heads + " Tails: "
-                  + tails;
+        return "You threw the coin for: " + numberOfThrows + " times." + " Heads: " + heads + " Tails: "
+                  + numberOfThrows - heads;
     }
 
 }
