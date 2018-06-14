@@ -6,14 +6,13 @@ public class OneDimentionalArray {
 
     public static int findMaxElement(int[] array) {
         int max = 0;
-        int size = array.length;
 
-        if (size < 1) {
+        if (array.length < 1) {
             max = -1;
         } else {
             max = array[0];
 
-            for (int i = 1; i < size; i++) {
+            for (int i = 1; i < array.length; i++) {
                 if (array[i] > max) {
                     max = array[i];
                 }
@@ -25,14 +24,13 @@ public class OneDimentionalArray {
 
     public static int findMinElement(int[] array) {
         int min = 0;
-        int size = array.length;
 
-        if (size < 1) {
+        if (array.length < 1) {
             min = -1;
         } else {
             min = array[0];
 
-            for (int i = 1; i < size; i++) {
+            for (int i = 1; i < array.length; i++) {
                 if (array[i] < min) {
                     min = array[i];
                 }
