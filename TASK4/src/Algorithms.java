@@ -8,14 +8,14 @@ public class Algorithms {
 
         InvalidException.isInvalidException(number);
 
-        int max_value = number % TEN;
-        int last_digit = max_value;
+        int maxValue = number % TEN;
+        int lastDigit = maxValue;
 
         while ((number /= TEN) > 0) {
-            last_digit = number % TEN;
+            lastDigit = number % TEN;
 
-            if (last_digit > max_value) {
-                max_value = last_digit;
+            if (lastDigit > maxValue) {
+                maxValue = lastDigit;
             }
         }
 
@@ -42,8 +42,9 @@ public class Algorithms {
         InvalidException.isInvalidException(number);
 
         boolean result = true;
+        int size = number / TWO;
 
-        for (int i = TWO; i <= number / TWO; i++) {
+        for (int i = TWO; i <= size; i++) {
             if (number % i == 0) {
                 result = false;
                 break;
@@ -57,9 +58,10 @@ public class Algorithms {
         InvalidException.isInvalidException(number);
 
         String result = "";
+        int size = number / TWO;
 
         if (number != 1 && !isSimpleNatural(number)) {
-            for (int i = TWO; i <= number / TWO; i++) {
+            for (int i = TWO; i <= size; i++) {
                 if (number % i == 0) {
                     if (isSimpleNatural(i)) {
                         result += i + " ";
