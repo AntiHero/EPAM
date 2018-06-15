@@ -8,7 +8,6 @@ public class Heads_n_Tails {
         InvalidException.isInvalidException(number_of_throws);
 
         int heads = 0;
-        int tails = 0;
         int side = 0;
 
         Random random = new Random();
