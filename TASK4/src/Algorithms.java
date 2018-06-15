@@ -73,85 +73,83 @@ public class Algorithms {
         return result;
     }
 
-    public static int findGCD(int number_1, int number_2) throws Exception {
+    public static int findGCD(int number1, int number2) throws Exception {
 
-        InvalidException.isInvalidException(number_1);
-        InvalidException.isInvalidException(number_2);
+        InvalidException.isInvalidException(number1);
+        InvalidException.isInvalidException(number2);
 
-        if (number_1 != number_2) {
-            while (number_1 != number_2) {
-                if (number_1 > number_2) {
-                    number_1 -= number_2;
+        if (number1 != number2) {
+            while (number1 != number2) {
+                if (number1 > number2) {
+                    number1 -= number2;
                 } else {
-                    number_2 -= number_1;
+                    number2 -= number1;
                 }
             }
         }
         return number_1;
     }
 
-    public static int findLCM(int number_1, int number_2) throws Exception {
+    public static int findLCM(int number1, int number2) throws Exception {
 
-        InvalidException.isInvalidException(number_1);
-        InvalidException.isInvalidException(number_1);
+        InvalidException.isInvalidException(number1);
+        InvalidException.isInvalidException(number1);
 
-        return number_1 * number_2 / findGCD(number_1, number_2);
+        return number1 * number2 / findGCD(number1, number2);
     }
 
     public static int findDifDigits(int number) throws Exception {
      
         InvalidException.isInvalidException(number);
         
-        int remainder = 0;
-
-        int num_0 = 0;
-        int num_1 = 0;
-        int num_2 = 0;
-        int num_3 = 0;
-        int num_4 = 0;
-        int num_5 = 0;
-        int num_6 = 0;
-        int num_7 = 0;
-        int num_8 = 0;
-        int num_9 = 0;
+        int num0 = 0;
+        int num1 = 0;
+        int num2 = 0;
+        int num3 = 0;
+        int num4 = 0;
+        int num5 = 0;
+        int num6 = 0;
+        int num7 = 0;
+        int num8 = 0;
+        int num9 = 0;
 
         while (number > 0) {
-            remainder = number % TEN;
-            switch (remainder) {
+            
+            switch (number % TEN) {
             case 1:
-                num_1 = ONE;
+                num1 = ONE;
                 break;
             case 2:
-                num_2 = ONE;
+                num2 = ONE;
                 break;
             case 3:
-                num_3 = ONE;
+                num3 = ONE;
                 break;
             case 4:
-                num_4 = ONE;
+                num4 = ONE;
                 break;
             case 5:
-                num_5 = ONE;
+                num5 = ONE;
                 break;
             case 6:
-                num_6 = ONE;
+                num6 = ONE;
                 break;
             case 7:
-                num_7 = ONE;
+                num7 = ONE;
                 break;
             case 8:
-                num_8 = ONE;
+                num8 = ONE;
                 break;
             case 9:
-                num_9 = ONE;
+                num9 = ONE;
                 break;
             default:
-                num_0 = ONE;
+                num0 = ONE;
                 break;
             }
             number /= TEN;
         }
-        return num_0 + num_1 + num_2 + num_3 + num_4 + num_5 + num_6 + num_7 + num_8 + num_9;
+        return num0 + num1 + num2 + num3 + num4 + num5 + num6 + num7 + num8 + num9;
     }
 
 }
