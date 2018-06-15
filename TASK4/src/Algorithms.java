@@ -1,17 +1,18 @@
 
 public class Algorithms {
-    private static final int ONE = 1;
-    private static final int TWO = 2;
-    private static final int TEN = 10;
+    private static final int DEFAULT_VALUE = 1;
+    private static final int FIRST_PRIME_NUMBER = 2;
+    private static final int DIVIDER = 2;
+    private static final int DECIMAL_BASE = 10;
 
     public static int findMaxNatural(int number) throws Exception {
 
         InvalidException.isInvalidException(number);
 
-        int maxValue = number % TEN;
+        int maxValue = number % DECIMAL_BASE;
         int lastDigit = maxValue;
 
-        while ((number /= TEN) > 0) {
+        while ((number /= DECIMAL_BASE) > 0) {
             lastDigit = number % TEN;
 
             if (lastDigit > maxValue) {
@@ -30,8 +31,8 @@ public class Algorithms {
         int palindrome = number;
 
         while (palindrome > 0) {
-            reverse = TEN * reverse + palindrome % TEN;
-            palindrome /= TEN;
+            reverse = DECIMAL_BASE * reverse + palindrome % DECIMAL_BASE;
+            palindrome /= DECIMAL_BASE;
         }
 
         return (number == reverse) ? "It's a palindrome!" : "It's not a palindrome!";
@@ -42,9 +43,9 @@ public class Algorithms {
         InvalidException.isInvalidException(number);
 
         boolean result = true;
-        int size = number / TWO;
+        int size = number / DIVIDER;
 
-        for (int i = TWO; i <= size; i++) {
+        for (int i = FIRST_PRIME_NUMBER; i <= size; i++) {
             if (number % i == 0) {
                 result = false;
                 break;
@@ -58,7 +59,7 @@ public class Algorithms {
         InvalidException.isInvalidException(number);
 
         String result = "";
-        int size = number / TWO;
+        int size = number / DIVIDER;
 
         if (number != 1 && !isSimpleNatural(number)) {
             for (int i = TWO; i <= size; i++) {
@@ -117,39 +118,39 @@ public class Algorithms {
 
         while (number > 0) {
             
-            switch (number % TEN) {
+            switch (number % DECIMAL_BASE) {
             case 1:
-                num1 = ONE;
+                num1 = DEFAULT_VALUE;
                 break;
             case 2:
-                num2 = ONE;
+                num2 = DEFAULT_VALUE;
                 break;
             case 3:
-                num3 = ONE;
+                num3 = DEFAULT_VALUE;
                 break;
             case 4:
-                num4 = ONE;
+                num4 = DEFAULT_VALUE;
                 break;
             case 5:
-                num5 = ONE;
+                num5 = DEFAULT_VALUE;
                 break;
             case 6:
-                num6 = ONE;
+                num6 = DEFAULT_VALUE;
                 break;
             case 7:
-                num7 = ONE;
+                num7 = DEFAULT_VALUE;
                 break;
             case 8:
-                num8 = ONE;
+                num8 = DEFAULT_VALUE;
                 break;
             case 9:
-                num9 = ONE;
+                num9 = DEFAULT_VALUE;
                 break;
             default:
-                num0 = ONE;
+                num0 = DEFAULT_VALUE;
                 break;
             }
-            number /= TEN;
+            number /= DECIMAL_BASE;
         }
         return num0 + num1 + num2 + num3 + num4 + num5 + num6 + num7 + num8 + num9;
     }
