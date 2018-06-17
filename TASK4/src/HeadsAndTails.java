@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Heads_n_Tails {
+public class HeadsAndTails {
     private final static int NUMBER_OF_SIDES = 2;
 
     public static String calcHeadsTails(int numberOfThrows) throws Exception {
