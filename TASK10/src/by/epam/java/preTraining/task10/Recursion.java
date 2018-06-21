@@ -26,7 +26,7 @@ public class Recursion {
         if (n < 0 || s < 0)
             return false;
 
-        return n == 0 ? s == 0 : equals(n / DECIMAL_BASE, s - n % DECIMAL_BASE);
+        return n == 0 ? s = 0 : equals(n / DECIMAL_BASE, s - n % DECIMAL_BASE);
     }
 
     public static int getFibonacciNum(int index) {
