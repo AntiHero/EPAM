@@ -3,7 +3,7 @@ package by.epam.java.preTraining.Task10;
 public class Recursion {
     static final int DECIMAL_BASE = 10;
     static final int FIRST_FIBONACCI_NUMBER = 1;
-    static final int SECOND_FIBONACCI_NUMBER = 2;
+    static final int SECOND_FIBONACCI_NUMBER = 1;
 
     public static int calcSumOfDigits(int number) {
 
