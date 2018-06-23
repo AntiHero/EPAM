@@ -18,7 +18,7 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        View.print("----Recursion Tester Program----");
+        View.print("----Recursion Test Program----");
         
         ProjectTester.calcPowerTest();
         ProjectTester.calcSumOfDigitsTest();
