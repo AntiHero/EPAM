@@ -7,7 +7,7 @@ public class ProjectTester {
         double number = Randomizer.makeRand(5.);
         int power = (int)Randomizer.makeRand(2.);
         
-        View.print("-----Power-----");
+        View.print("-----------Power----------");
         View.print("Number: " + number + ", Power: " + power + ", Result: " + Recursion.calcPower(number, power));
         
     }
@@ -15,7 +15,7 @@ public class ProjectTester {
     public static void calcSumOfDigitsTest() {
         int number = (int)Randomizer.makeRand(1000);
         
-        View.print("\n-----Sum Of Digits-----");
+        View.print("\n------Sum Of Digits------");
         View.print("Number: " + number + ", Sum: " + Recursion.calcSumOfDigits(number));
     }
     
@@ -26,7 +26,7 @@ public class ProjectTester {
         int number = 358;
         int sum = 16;
         
-        View.print("\n-----Equals-----");
+        View.print("\n--------Equals--------");
         View.print("First number: " + number + ", Pseudo sum: " + sum + ", Equals?:" + Recursion.equals(number, sum));
     }
     
