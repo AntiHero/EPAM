@@ -27,4 +27,15 @@ class Search {
         }
         return index;
     }
+    
+      public static int searchTruckCapacityLinear(CarFleet carFleet, int search) {
+        int pos = 0;
+        
+        while (pos < carFleet.getContainer().getTruckNumber()) {
+            if (carFleet.getContainer().getTruck(pos).getMaxCapacity() == search) {
+                return pos;
+            }
+        }
+        return -1;
+    }
 }
