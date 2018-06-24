@@ -5,7 +5,7 @@ public class TwoDimentionalArray {
     private final static int MIN_COLUMNS = 3;
 
     public static double findMaxElement(double[][] array) {
-        double max = 0.;
+        double max = array[0][0];
 
         if (array.length < 1 || isColumnLengthZero(array)) {
             max = -1;
@@ -22,7 +22,7 @@ public class TwoDimentionalArray {
     }
 
     public static double findMinElement(double[][] array) {
-        double min = 0.;
+        double min = array[0][0];
 
         if (array.length < 1 || isColumnLengthZero(array)) {
             min = -1;
